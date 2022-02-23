@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="{{url_for("index")}}">ファイル一覧</a>
+
+<h2>グラフ描画</h2>
+
+    <p>ファイル選択</p>
+    <form method="post" enctype="multipart/form-data" action="{{ url_for("draw_graph")}}">
+        <select name="sel">
+            {% for file in filelist %}
+            <option value={{file}}>{{file}}</option>
+            {% endfor %}
+        </select>
+        <div>
+            <input type="submit" value="実行">
+        </div>
+    </form>
+
+<h2>グラフ</h2>
+    {% if figlist == [] %}
+    <p>グラフはありません</p>
+    {% else %}    
+        {% for fig in figlist %}
+        <p>{{ fig }}</p>
+        <img src="{{ url_for('static', filename='picture/' + fig)}}">
+        {% endfor %}
+    {% endif %}
+
+{% endblock%}
