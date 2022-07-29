@@ -1,6 +1,6 @@
 # GraphTool
 
-csvファイルをアップロードし、グラフ化するWebアプリケーション
+A tool to convert csv to graphing.
 
 
 # Requirement
