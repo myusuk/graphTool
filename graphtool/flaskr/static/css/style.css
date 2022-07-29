@@ -1,0 +1,26 @@
+body{
+	background-color: rgba(143, 188, 143, 0.1);
+}
+		
+header{
+	background-color: rgba(89, 101, 120, 0.4);
+}
+		
+ul{
+	list-style-type: none;
+}
+		
+.menu{
+	background-color: rgba(89, 101, 120, 0.7);
+}
+		
+.side-menu{
+	background-color: rgba(143, 188, 143, 0.4);
+}
+
+.box{
+	background-color:white; 
+}
+
+
+

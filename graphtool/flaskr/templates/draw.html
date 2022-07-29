@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<a href="{{url_for("index")}}">ファイル一覧</a>
+<h2>Drow Graph</h2>
 
-<h2>グラフ描画</h2>
-
-    <p>ファイル選択</p>
+    <p>File Select</p>
     <form method="post" enctype="multipart/form-data" action="{{ url_for("draw_graph")}}">
         <select name="sel">
             {% for file in filelist %}
@@ -13,13 +11,13 @@
             {% endfor %}
         </select>
         <div>
-            <input type="submit" value="実行">
+            <input type="submit" value="submit">
         </div>
     </form>
 
-<h2>グラフ</h2>
+<h2>Graph</h2>
     {% if figlist == [] %}
-    <p>グラフはありません</p>
+    <p>Graph is not exist.</p>
     {% else %}    
         {% for fig in figlist %}
         <p>{{ fig }}</p>
