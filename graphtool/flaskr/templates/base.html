@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>glaph</title>
 </head>
 <body>
-    <h1>グラフ描画ツール</h1>
-    {% block content %}
+	<div class="all">
+		<header class="row">
+			<div class="container">
+				<label class="h1 col-10">Graph Tool</label>
+				
+                    <a href="/" class="col-2">home</a>
+                
+			</div>
+		</header>
+		<div class="row menu">
+			<p>menu
+		</div>
+		<div class="row">
+			<div class="container col-2 side-menu">
+				<table class="table">
+					<tr>
+						<td><a href="{{url_for("form")}}">csv upload</a></td>
+					</tr>
+					<tr>
+						<td><a href="{{url_for("draw")}}">draw graph</a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="container col-10">
+				{% block content %}
+                {% endblock %}
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script >
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	{% block javascript %}
     {% endblock %}
+	<!-- script file -->
 </body>
-</html>

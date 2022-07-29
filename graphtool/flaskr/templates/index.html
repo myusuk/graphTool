@@ -1,18 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<a href="{{url_for("form")}}">ファイルのアップロード</a>
-<p></p>
-<a href="{{url_for("draw")}}">グラフ描画</a>
 
-<h2>ファイル一覧</h2>
+<h2>All File</h2>
     {% if filelist == [] %}
-        <p>ファイルはありません</p>
+        <p>File is not exist.</p>
     {% else %}    
         {% for file in filelist %}
             <p>{{ file }}</p>
         {% endfor %}
     {% endif %}
-    <p>練習1</p>
 
 {% endblock%}

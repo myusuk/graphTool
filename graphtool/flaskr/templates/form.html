@@ -1,20 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<a href="{{url_for("index")}}">ファイル一覧</a>
-
-<h2>ファイルのアップロード<h2>
+<h2>CSV upload<h2>
     <form method="post" enctype="multipart/form-data" action="{{ url_for("upload_file")}}">
         <input type="file" name="file">
         <p></p>
-        <button type="submit">アップロード</button>
+        <button type="submit">Upload</button>
     </form>
 
 
-<h3>※ファイル作成ルール</h3>
-    <li>拡張子は.csv</li>
-    <li>A列：購入月　記載例）2021年12月</li>
-    <li>B列：商品名</li>
-    <li>C列：売り上げ金額</li>
+<h3>※CSV file rule</h3>
+    <li>Accept .csv file only</li>
+    <li>A: Purchase month ex) 2021年12月</li>
+    <li>B: Product name</li>
+    <li>C: Sales amount</li>
 
 {% endblock%}
